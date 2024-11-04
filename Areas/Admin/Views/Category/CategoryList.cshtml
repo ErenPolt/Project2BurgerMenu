@@ -1,0 +1,49 @@
+﻿@model List<Project2BurgerMenu.Entities.Category>
+
+@{
+    ViewBag.Title = "CategoryList";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Kategori Listesi</h4>
+            <p class="card-description">
+
+
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Kategori Id</th>
+                            <th>Kategori Adı</th>
+                            <th>Kategori Ürünleri</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                   @foreach(var item in Model)
+                    {
+
+
+    <tr>
+        <td>@item.CategoryId</td>
+        <td>@item.CategoryName</td>
+<td><a href="/Admin/Product/KategoriUrunleri/@item.CategoryId" class="btn btn-warning rounded-pill"  style="background: linear-gradient(45deg, #6ce9da, #360267); ">Kategori Ürünleri</a></td>
+<td><a href="/Admin/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger rounded-pill">Sil</a></td>
+            <td><a href="/Admin/Category/UpdateCategory/@item.CategoryId" class="btn btn-success rounded-pill">Güncelle</a></td>
+
+        </tr>
+        }
+
+    </tbody>
+</table>
+<a href="/Admin/Category/CreateCategory/" class="btn btn-primary rounded-pill" style="background: linear-gradient(45deg, #6ce9da, #360267); ">Yeni Kategori Girişi</a>
+</div>
+        </div>
+    </div>
+</div>

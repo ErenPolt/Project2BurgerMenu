@@ -1,0 +1,46 @@
+﻿@model Project2BurgerMenu.Entities.Reservation
+@{
+    ViewBag.Title = "UpdateReservation";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Rezervasyon Detayları</h4>
+            <br />
+            <form method="post">
+                @Html.HiddenFor(x => x.ReservationId)
+                <div class="col">
+                    <label><b>Rezervasyon Sahibi</b></label>
+                    <div id="the-basics">
+                        <div class="input-group">
+                            @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                            @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <label><b>Email Adresi:</b></label>
+                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                    <br />
+                    <label><b>Telefon Numarası:</b></label>
+                    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+                    <br />
+                    <label><b>Kişi Sayısı:</b></label>
+                    @Html.TextBoxFor(x => x.PeopleCount, new { @class = "form-control" })
+                    <br />
+                    <label><b>Rezervasyon Tarih:</b></label>
+                    @Html.TextBoxFor(x => x.ReservationDate, new { @class = "form-control" })
+                    <br />
+                    <label><b>Rezervasyon Saati:</b></label>
+                    @Html.TextBoxFor(x => x.Time, new { @class = "form-control" })
+                    <br />
+                    <label><b>Mesaj:</b></label>
+                    @Html.TextBoxFor(x => x.Message, new { @class = "form-control" })
+                    <br /> </div>
+                    <button class="btn btn-success rounded-pill"  style="background-color: #f17924;">Güncelle</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿@model List<Project2BurgerMenu.Entities.Product>
+@{
+    ViewBag.Title = "KategoriÜrünleri";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Kategori Ürünleri</h4>
+            <p class="card-description">
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th><b>Kategori Ürünleri</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{ int i = 0;}
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td><span>@{i++;}@i.</span></td>
+                                <td><img src="@item.ImageUrl" height="50" width="50" /> </td>
+                                <td>@item.ProductName</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <br />
+                <a href="/Admin/Category/CategoryList/" class="btn btn-primary rounded-pill"  style="background: linear-gradient(45deg, #6ce9da, #360267); ">Kategori Sayfasına Dön</a>
+            </div>
+        </div>
+    </div>
+</div>
+

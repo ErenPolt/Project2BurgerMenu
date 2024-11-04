@@ -1,0 +1,29 @@
+﻿@model Project2BurgerMenu.Entities.Category
+
+
+@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+
+
+            <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Yeni Kategori  Girşi</h4>
+                        <br />
+                        <form method="post">
+                            <div class="modal-body">
+                                <label>Kategori Adı:</label>
+                                @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+                                <br />
+                            </div>
+                            <button class="btn btn-info rounded-pill" style="background: linear-gradient(45deg, #6ce9da, #360267); ">Kategori  Ekle</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+     
+
