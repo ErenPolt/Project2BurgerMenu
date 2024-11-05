@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
 }
@@ -21,32 +20,32 @@
                 </div>
             </div>
         </div>
-    <div class="col-sm-3 stretch-card d-flex text-center">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">Ürünlerin Ortalama Fiya</h4>
-                <h4 class="text-dark font-weight-bold mb-2">@ViewBag.avgPrice</h4>
+        <div class="col-sm-3 stretch-card d-flex text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Ürünlerin Ortalama Fiya</h4>
+                    <h4 class="text-dark font-weight-bold mb-2">@ViewBag.avgPrice</h4>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-sm-3 stretch-card d-flex text-center">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">En Pahalı Ürün </h4>
-                <h4 class="text-dark font-weight-bold mb-2">@ViewBag.maxPrice</h4>
+        <div class="col-sm-3 stretch-card d-flex text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">En Pahalı Ürün </h4>
+                    <h4 class="text-dark font-weight-bold mb-2">@ViewBag.maxPrice</h4>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-sm-3 stretch-card d-flex text-center">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title">En Ucuz Ürün</h4>
-                <h4 class="text-dark font-weight-bold mb-2">@ViewBag.minprice</h4>
+        <div class="col-sm-3 stretch-card d-flex text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">En Ucuz Ürün</h4>
+                    <h4 class="text-dark font-weight-bold mb-2">@ViewBag.minprice</h4>
+                </div>
             </div>
         </div>
+
     </div>
-   
-</div>
 
     <!-- Boşluk bırakmak için margin -->
     <div class="mb-4"></div>
@@ -128,7 +127,7 @@
 </div>
 
 <script>
-// Rastgele bir renk oluşturma fonksiyonu
+    // Rastgele bir renk oluşturma fonksiyonu
     function getRandomColor() {
         const letters = '0123456789ABCDEF';
         let color = '#';
@@ -138,7 +137,7 @@
         return color;
     }
 
-    window.onload = function() {
+    window.onload = function () {
         // Tüm kart başlıklarını seçin
         const cardTitles = document.querySelectorAll('.card-title');
         cardTitles.forEach(title => {

@@ -35,11 +35,11 @@
                                 <td>@item.SendDate.ToString("dd / MM / yyyy")</td>
                                 @if (item.IsRead == false)
                                 {
-                                    <td><a href="@Url.Action("MessageStatusChangeToTrue", "Contact", new { area = "Admin", id = item.ContactID })" class="btn btn-inverse-primary btn-fw">Okundu Olarak İşaretle</a></td>
+                                    <td><a href="@Url.Action("MessageStatusChangeToTrue", "Contact", new { area = "Admin", id = item.ContactID })" class="btn btn-inverse-primary rounded-pill"  style="background: linear-gradient(45deg, #6ce9da, #360267); ">Okundu Olarak İşaretle</a></td>
                                 }
                                 else
                                 {
-                                    <td><a href="@Url.Action("MessageStatusChangeToFalse", "Contact", new { area = "Admin", id = item.ContactID })" class="btn btn-primary">Okunmadı Olarak İşaretle</a></td>
+                                    <td><a href="@Url.Action("MessageStatusChangeToFalse", "Contact", new { area = "Admin", id = item.ContactID })" class="btn btn-primary rounded-pill"  style="background: linear-gradient(45deg, #6ce9da, #360267); ">Okunmadı Olarak İşaretle</a></td>
                                 }
 
                                 <td><a href="@Url.Action("DeleteMessage", "Contact", new { area = "Admin", id = item.ContactID })" class="btn btn-danger">Sil</a></td>

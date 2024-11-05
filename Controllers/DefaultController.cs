@@ -62,11 +62,13 @@ namespace Project2BurgerMenu.Controllers
         //--------------------------------------------------------
         public PartialViewResult PartialGallery()//Galeri
         {
-            return PartialView();
+            var values=context.Products.Take(6).ToList();
+            return PartialView(values);
         }
         //--------------------------------------------------------
         public PartialViewResult PartialFooter()
         {
+            ViewBag.description = context.Abouts.Select(x => x.Description).FirstOrDefault();
             return PartialView();
         }
         //---------------------------------------------------------
@@ -92,6 +94,32 @@ namespace Project2BurgerMenu.Controllers
             return PartialView();
         }
         //------------------------------------------------------------------------------
-        
+        public PartialViewResult PartialContact()
+        {
+            var values = context.Abouts.ToList();
+            return PartialView(values);
+        }
+        //-----------------------------------------------------------------------------------
+        [HttpPost]
+        public ActionResult PartialSubscribe(Subscribe subscribe)
+        {
+            if (ModelState.IsValid)
+            {
+                context.Subscribes.Add(subscribe);
+                context.SaveChanges();
+
+                return RedirectToAction("Index", "Default");
+            }
+
+            return PartialView();
+        }
+        //------------------------------------------------------------------------------------------------
+        public PartialViewResult PartialLocation()
+        {
+            ViewBag.mapLocation = context.Abouts.Select(x => x.MapLocation).FirstOrDefault();
+            return PartialView();
+        }
+
+
     }
 } 

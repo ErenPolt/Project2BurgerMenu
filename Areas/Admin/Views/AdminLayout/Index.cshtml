@@ -11,12 +11,14 @@
 
 <body>
     <div class="container-scroller">
-        
+
         <!-- partial:../../partials/_navbar.html -->
         @Html.Action("PartialNavbar", "AdminLayout", "Admin")
         @Html.Action("PartialCategory", "AdminLayout", "Admin")
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
+            
+
             <!-- partial:../../partials/_sidebar.html -->
             @Html.Action("PartialSidebar", "AdminLayout", "Admin")
 
@@ -27,6 +29,7 @@
                         @RenderBody()
                     </div>
                 </div>
+                
                 <!-- content-wrapper ends -->
                 <!-- partial:../../partials/_footer.html -->
                 <footer class="footer">

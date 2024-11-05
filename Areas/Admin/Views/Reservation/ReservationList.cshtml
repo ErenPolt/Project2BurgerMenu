@@ -67,12 +67,11 @@
                                 
 
                               
-                                <td><a href="@Url.Action("UpdateReservation", "Reservation", new { area = "Admin", id = item.ReservationId })" type="button" class="btn btn-outline-dribbble rounded-pill "> <i class="mdi mdi-upload"></i></a></td>
+                                <td><a href="@Url.Action("UpdateReservation", "Reservation", new { area = "Admin", id = item.ReservationId })" type="button" class="btn btn-outline-dribbble rounded-pill" > <i class="mdi mdi-upload"></i></a></td>
 
 
                                 <td><a href="@Url.Action("StatusChangeToConfirm", "Reservation", new { area = "Admin", id = item.ReservationId })" class="btn btn-success rounded-pill">Onayla</a></td>
                                 <td><a href="@Url.Action("StatusChangeToWait", "Reservation", new { area = "Admin", id = item.ReservationId })" class="btn btn-inverse-warning rounded-pill">Onayı Beklet</a></td>
-                                @*<td><a href="@Url.Action("StatusChangeToCame", "Reservation", new { area = "Admin", id = item.ReservationId })" class="btn btn-twitter rounded-pill">Müşteri Gelmedi</a></td>*@
                                 <td><a href="@Url.Action("StatusChangeToCancel", "Reservation", new { area = "Admin", id = item.ReservationId })" class="btn btn-danger rounded-pill">İptal Et</a></td>
                             </tr>
                         }
